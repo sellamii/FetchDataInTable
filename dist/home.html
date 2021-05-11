@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+<head>
+<!-- start head.tpl.html-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="/assets/images/favicon.png">
+
+<title>Le Journal De Dimanche</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href="/assets/css/styles.css" rel="stylesheet">
+<!-- end head.tpl.html-->
+</head>
+<!-- add Class fixed-header-navbar to fix header navbar -->
+<body class=" page-home">
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- start header.tpl.html-->
+<header class="header clearfix sticky-top" id="header">
+  <div class="header-top d-flex justify-content-between align-items-center">
+    <div class="header-top--center">
+      <a class="btn-block header-top--btn-goto-home" href="/">
+        <div class="logo">
+          <img class="img" src="/assets/images/logo-lejdd.svg" alt="Le Journal De Dimanche">
+        </div>
+      </a>
+    </div>
+  </div>
+
+<!-- start navbar.tpl.html-->
+<nav class="navbar navbar-expand-md header-navbar">
+    <div class="navbar-collapse offcanvas-collapse" id="navigation">
+      <ul class="navbar-nav m-auto navbar-primary">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mon abonnement</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Mes newsletters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Le journal numérique</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- end navbar.tpl.html-->
+  
+</header>
+<!-- end header.tpl.html-->
+
+<main class="main">
+<!-- start main -->
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+   
+
+    <head>
+        <script src="../../js/data.js"></script>
+        <script src="../../js/sorttable.js"></script>
+        <link rel="stylesheet" href="./css/epiq.css" />
+        <title>Epiq Data</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Epiq Data</h1>
+            <table class="noBdr">
+                <tr class="tc">
+                    <td>
+                        <label for="cityInput">Enter a city name</label>
+                        <input type="text" id="cityInput" onkeyup="filterCity()" name="cityInput" placeholder="Nashville">
+                    </td>
+                    <td>
+                        <label for="stateInput">Pick a state to search in</label>
+                        <select id="stateInput" onchange="filterState()" name="stateInput"><option></option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
+                    </td>
+                    <td>
+                        <label for="min">Minimum Population</label>
+                        <input type="number" id="min" onchange="filterPop()" name="min" value="0">
+                    </td>
+                    <td>
+                        <label for="max">Maximum Popualation</label>
+                        <input type="number" id="max" onchange="filterPop()" name="max" value="8537673">
+                    </td>
+                </tr>
+            </table> 
+            <p></p>
+            <table id="table" class="sortable">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>State</th>
+                        <th class="sorttable_numeric">Population</th>
+                    </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+    </body>
+
+   
+</div>
+
+
+<!-- end main -->
+</main>
+
+<!-- start footer.tpl.html-->
+<footer class="footer mt-auto hr-top">
+  <div class="inner">
+    <div class="container">
+      <section class="footer-middle">
+          <div class="d-flex justify-content-between justify-content-md-center">
+              <div class="footer-nav align-self-center justify-content-md-center">
+                <ul class="list-unstyled list-inline">
+                  
+                  <li class="list-inline-item"><a href="#" title="CGU">CGU</a></li>
+                  <li class="list-inline-item"><a href="#" title="CGV">CGV </a></li>
+                  <li class="list-inline-item"><a href="#" title="Mentions légales">Mentions légales</a></li>
+                  <li class="list-inline-item"><a href="#" title="Aide en ligne">Aide en ligne</a></li>
+                  <li class="list-inline-item"><a href="#" title="Données personnelles">Données personnelles</a></li>
+                  <li class="list-inline-item"><a href="#" title="Contact">Contact</a></li>
+
+                </ul>
+              </div>
+    
+             
+            </div>
+         
+        </div>
+      </section>
+     
+      <section class="footer-bottom">
+        <div class="copyright justify-content-md-center">
+            <p>2020 © Le Journal du Dimanche. Le site LeJDD.fr est édité par Lagardère Média News </p>
+        </div>
+      </section>
+    </div>
+</footer>
+
+
+<script src="/assets/js/scripts.js"></script>
+<!-- end footer.tpl.html-->
+</body>
+</html>

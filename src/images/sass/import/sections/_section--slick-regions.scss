@@ -1,0 +1,105 @@
+// Modal Optin
+// --------------------------------------------------
+
+// Variable
+// --------------------------------------------------
+$section--slick-regions--card-width: 240px !default;
+$section--slick-regions--card-height: 197px !default;
+
+// Mixin
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+
+.section--slick.section--slick-regions {
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  .slick {
+    .slick-arrow {
+      width: initial;
+      position: absolute;
+      bottom: rem(40px);
+
+      &:after {
+        width: rem(24px);
+        height: rem(44px);
+        background-image: url(images/icon-arrow-left-blue.svg,base64);
+        margin-top: rem(-22px);
+      }
+
+      &.slick-prev {
+        background: transparent;
+        left: rem(-$CONST-BASE-UNIT * 6);
+        &:after {
+          left: 0;
+          margin-left: 0;
+        }
+      }
+
+      &.slick-next {
+        background: transparent;
+        right: rem(-$CONST-BASE-UNIT * 6);
+        &:after {
+          right: 0;
+          margin-right: 0;
+        }
+
+      }
+    }
+
+    .slick-dots {
+      position: relative;
+      margin-top: rem($CONST-BASE-UNIT * 4);
+
+      li {
+        background-color: $var-color-blue-6d8cac;
+        &.slick-active {
+          background-color: transparent;
+          border: 1px solid $var-color-blue-123f5c;
+        }
+      }
+    }
+  }
+
+  .slick-item {
+    background-color: $white;
+    color: $white;
+  }
+
+  .card {
+    border: 0;
+    border-radius: 0;
+    height: $section--slick-regions--card-height;
+    margin: 0 auto;
+    width: $section--slick-regions--card-width;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-header {
+    align-items: center;
+    border: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .card-sub-title{
+    font-size: rem(12px);
+    font-weight: $CONST-FONT-WEIGHT-BOLD;
+    text-transform: uppercase;
+  }
+
+  .card-title{
+    font-size: rem(24px);
+    font-weight: $CONST-FONT-WEIGHT-BOLD;
+    line-height: rem(28px);
+  }
+}

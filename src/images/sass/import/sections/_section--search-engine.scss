@@ -1,0 +1,122 @@
+.section--search-engine {
+  align-items: center;
+  background-image: url('../images/bg-search-annonce.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
+  position: relative;
+
+  &:before {
+    content: "";
+    background-color: rgba($dark, .15);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+
+  }
+
+  .section-header,
+  .section-body {
+    width: 100%;
+  }
+
+  .section-header {
+    margin-bottom: rem(20px);
+    text-align: center;
+
+    .h2.title {
+      color: $white;
+      font-size: rem(56px);
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+      line-height: rem(67px);
+      margin-bottom: 0;
+      text-shadow: 0 0 10px rgba(12,40,59,0.10);
+    }
+
+    .sub-title {
+      color: $white;
+      font-size: rem(24px);
+      font-weight: $CONST-FONT-WEIGHT-REGULAR;
+      line-height: rem(29px);
+      text-shadow: 0 0 10px rgba(12,40,59,0.10);
+    }
+  }
+
+  .form-inline {
+
+    background-color: $white;
+    padding: rem(4px);
+    box-shadow: 0 10px 44px 0 rgba(18,63,92,0.60);
+
+    .block-iocn-input {
+      align-items: center;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+    .mpi {
+      padding-left: rem(18px);
+      padding-right: rem(18px);
+    }
+
+    .form-control {
+      border: 0;
+      color: $blue;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .btn-submit {
+      min-width: rem(160px);
+    }
+  }
+
+}
+
+@include media-breakpoint-down(sm) {
+  .section--search-engine {
+    .section-header {
+      .h2.title {
+        font-size: rem(44px);
+        line-height: rem(40px);
+      }
+    }
+
+    .form-inline {
+      padding: rem(20px);
+
+      .mpi {
+        padding: 0;
+      }
+
+      .block-iocn-input {
+        border-bottom: 1px solid $var-color-d1dde9;
+        margin: 0 0 20px 0;
+      }
+      .form-group {
+
+      }
+
+      .form-control {
+        border: 0;
+        color: $blue;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .btn-submit {
+        width: 100%;
+      }
+    }
+  }
+}

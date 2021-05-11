@@ -1,0 +1,104 @@
+.card--ad {
+  overflow: hidden;
+
+  .card--ad-link {
+    @include a-text-decoration;
+  }
+
+  .card-header {
+    height: rem(220px);
+    position: relative;
+    color: $white;
+
+    .card-header-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: rem($CONST-BASE-UNIT * 1.25);
+      .btn {
+        color: $white;
+        font-size: rem(13px);
+        line-height: rem(16px);
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .card-img-top {
+      height: rem(220px);
+      overflow: hidden;
+      background-color: $var-color-light-steel-blue;
+    }
+    .card-header-bottom {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: rem($CONST-BASE-UNIT * 2);
+    }
+    .price {
+      font-size: rem(36px);
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+    }
+    .price-note {
+
+      color: $gray-200;
+      font-size: rem(11px);
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+    }
+  }
+
+  .card-body {
+    .notice {
+      color: $blue;
+
+      .notice-title {
+        font-size: rem(10px);
+        font-weight: $CONST-FONT-WEIGHT-REGULAR;
+        text-transform: uppercase;
+      }
+
+      .notice-price {
+        font-size: rem(26px);
+        font-weight: $CONST-FONT-WEIGHT-BLACK;
+        line-height: rem(32px);
+
+        .currency {
+          font-size: rem(10px);
+        }
+      }
+
+      .notice-items {
+        margin-top: rem(4px);
+        margin-bottom: rem(13px);
+
+        ul {
+          margin: 0;
+        }
+
+        .title {
+          font-size: rem(14px);
+          line-height: rem(23px);
+        }
+        .val-item {
+          font-size: rem(13px);
+          font-weight: $CONST-FONT-WEIGHT-MEDIUM;
+          line-height: rem(23px);
+          padding: 0 rem($CONST-BASE-UNIT / 2);
+          background-color: $var-color-blue-lightest;
+          + .val-item {
+            margin-left: rem($CONST-BASE-UNIT / 2);
+          }
+        }
+      }
+      .notice-location {
+        font-size: rem(12px);
+        font-weight: $CONST-FONT-WEIGHT-MEDIUM;
+        .mpi:before {
+          color: $var-color-blue-6d8cac;
+        }
+      }
+    }
+  }
+}

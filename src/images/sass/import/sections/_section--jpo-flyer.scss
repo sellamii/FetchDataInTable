@@ -1,0 +1,39 @@
+.section--jpo-flyer {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  height: rem(183px);
+  padding: ($CONST-BASE-UNIT-5 * 8) ($CONST-BASE-UNIT-5 * 7);
+  margin-bottom: $CONST-BASE-UNIT * 5;
+
+  .section--jpo-flyer--header {
+
+  }
+
+  .date {
+    font-size: rem(17px);
+    font-weight: $CONST-FONT-WEIGHT-REGULAR;
+    line-height: rem(17px);
+    margin-bottom: $CONST-BASE-UNIT-5 * 0.5;
+  }
+
+  .title {
+    line-height: rem(34px);
+    font-size: rem(30px);
+    font-weight: $CONST-FONT-WEIGHT-BOLD;
+    margin: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .section--jpo-flyer {
+    padding: ($CONST-BASE-UNIT-5 * 4) ($CONST-BASE-UNIT-5 * 3);
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .title{
+      font-size: rem(26px);
+    }
+  }
+}

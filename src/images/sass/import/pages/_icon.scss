@@ -1,0 +1,42 @@
+.section-content-icon {
+  padding-top: $CONST-BASE-UNIT * 3;
+  font-size: 22px;
+
+  .pbs > .mpi{
+    font-size: 22px;
+  }
+  .glyph {
+    margin-bottom: $CONST-BASE-UNIT * 5;
+  }
+
+  .bshadow0 {
+    border-bottom: 1px solid $gray-200;
+  }
+
+  .fs0.size1of1 {
+    border-bottom: 1px solid $gray-200;
+
+  }
+
+  .unit {
+    float: left;
+    width: 70%;
+    border: 0;
+  }
+
+  .unitRight {
+    float: right;
+    width: 30%;
+    text-align: right;
+    border: 0;
+
+  }
+
+  .unit,
+  .unitRight {
+    color: $gray-400;
+    &:hover {
+      color: $gray-700;
+    }
+  }
+}

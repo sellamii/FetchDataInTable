@@ -1,0 +1,20 @@
+.section--slick.section--slick-gallery {
+  .slick {
+    height: rem(454px);
+    .slick-slide {
+      div,
+      .slick-item,
+      img {
+        height: rem(454px);
+      }
+    }
+  }
+
+  .section-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: $CONST-BASE-UNIT * 2.5;
+    z-index: 10;
+  }
+}

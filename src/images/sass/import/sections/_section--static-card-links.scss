@@ -1,0 +1,204 @@
+//
+// Util Function
+// --------------------------------------------------
+
+// Variable
+// --------------------------------------------------
+
+$section--static-card-links--card-small--height: 240px !default;
+$section--static-card-links--card-large--height: 480px !default;
+$section--static-card-links--card-large--height--sm: 240px !default;
+$section--static-card-links--card-history--background-color: #787370 !default;
+$section--static-card-links--card-certification--background-color: $var-color-blue-light !default;
+$section--static-card-links--card-fabrication--background-color: $green !default;
+
+// Mixin
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+.section--static-card-links {
+
+  margin-bottom: rem(50px);
+  margin-top: rem(50px);
+
+  .card {
+    color: $white;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .card-header {
+    background-color: transparent;
+    border: 0;
+    bottom: 0;
+    padding-bottom: rem(30px);
+    padding-left: rem(30px);
+    padding-right: rem(30px);
+    position: absolute;
+    width: 100%;
+  }
+
+  .card-sup-title {
+    font-size: rem(12px);
+    margin-bottom: rem(5px);
+    line-height: rem(16px);
+    text-transform: uppercase;
+  }
+
+  .card-title {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-size: rem(24px);
+    justify-content: space-between;
+    line-height: rem(29px);
+    margin: 0;
+  }
+
+  .col-left {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+
+  .card-history {
+    background-color: $section--static-card-links--card-history--background-color;
+    background-image: url(../images/histoire-maison-phenix.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: $section--static-card-links--card-large--height;
+
+    .card-title {
+      font-size: rem(28px);
+    }
+
+    .link {
+      align-items: center;
+      display: flex;
+      font-size: rem(20px);
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+      margin-top: rem(14px);
+    }
+  }
+
+  .card-certification,
+  .card-fabrication {
+    background-position: 30px 53px;
+    background-repeat: no-repeat;
+    height: $section--static-card-links--card-small--height;
+
+    .card-sub-title {
+      opacity: .6;
+    }
+  }
+
+  .card-certification {
+    background-color: $section--static-card-links--card-certification--background-color;
+    background-image: url(../images/icon/certification.svg);
+  }
+
+  .card-fabrication {
+    background-color: $section--static-card-links--card-fabrication--background-color;
+    background-image: url(../images/icon/fabrication.svg);
+  }
+
+  &.large {
+    margin-bottom: 0;
+  }
+
+  &.cards-blue-green {
+    .col-left {
+      flex: 0 0 0;
+      max-width: 0;
+    }
+
+    .card-history {
+      display: none;
+    }
+
+    .col-right {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .card-certification,
+    .card-fabrication {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &.cards-history-certification {
+    .col-left {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .card-history {
+      height: $section--static-card-links--card-small--height;
+    }
+
+    .card-fabrication {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .section--static-card-links {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .col-left,
+    .col-right {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .card-history {
+      height: $section--static-card-links--card-large--height--sm;
+
+      .link {
+        display: none;
+      }
+    }
+
+    .card-certification,
+    .card-fabrication {
+      .mpi {
+        display: none;
+      }
+    }
+
+    &.cards-blue-green {
+      margin: 0;
+
+      .col-right {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-certification,
+      .card-fabrication {
+        max-width: 100%;
+      }
+    }
+
+    &.cards-history-certification {
+      margin: 0;
+
+      .col-right,
+      .col-left {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .card-history,
+      .card-certification {
+        max-width: 100%;
+      }
+    }
+  }
+}

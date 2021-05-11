@@ -1,0 +1,237 @@
+.aside--reminded {
+  position: relative;
+
+  .modal {
+    .modal-body {
+      padding: 0;
+    }
+  }
+
+  .aside--body {
+    position: relative;
+    &.js--affix-aside {
+      position: fixed;
+    }
+  }
+
+  .card {
+    border: 0;
+    box-shadow: 0 10px 20px 0 rgba(170, 183, 195, 0.30);
+
+    &.offset-top {
+      margin-top: rem(-(92px));
+    }
+  }
+
+  .card-header {
+    color: $white;
+    background-color: $var-color-blue-123f5c;
+    height: rem(92px);
+
+    .price {
+      font-size: rem(38px);
+      line-height: rem(46px);
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+
+      .currency {
+        font-size: rem(24px);
+      }
+    }
+
+    .price-good-to-know {
+      font-weight: $CONST-FONT-WEIGHT-REGULAR;
+
+      .btn-question {
+        opacity: 0.6;
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .card-header--contact {
+      display: none;
+    }
+  }
+
+  &.without-header {
+    .card-header {
+      display: none;
+    }
+  }
+
+  .show-number {
+    margin-bottom: rem(20px);
+    .btn-number {
+      display: none !important;
+    }
+
+    &.show {
+      .btn-show {
+        display: none !important;
+      }
+      .btn-number {
+        display: flex !important;
+      }
+    }
+  }
+
+  .card-body {
+    .h3 {
+      font-size: rem(22px);
+      line-height: rem(26px);
+      font-weight: $CONST-FONT-WEIGHT-LIGHT;
+    }
+
+    .form-check-label {
+      font-size: rem(12px);
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+      line-height: rem(18px);
+    }
+
+    .info {
+      color: $var-color-light-steel-blue;
+      font-size: rem(11px);
+    }
+  }
+
+  .hs-form-field {
+    > label {
+      display: none;
+    }
+  }
+
+  .section--navbar-quickaccess & {
+    .card {
+      margin: 0;
+      border: 0;
+    }
+
+    .card-header {
+      height: rem($var-section--navbar-quickaccess--height);
+      border: 0;
+      overflow: hidden;
+
+      .price {
+        font-size: rem(29px);
+
+        .currency {
+          font-size: rem(22px);
+        }
+      }
+      .price,
+      .price-good-to-know {
+        line-height: rem($var-section--navbar-quickaccess--height) - rem($CONST-BASE-UNIT * 3);
+      }
+
+      .price-good-to-know {
+        margin-left: rem($CONST-BASE-UNIT * 3);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .aside--reminded {
+    .modal {
+      display: block !important;
+      opacity: 1;
+      position: relative;
+      z-index: initial;
+
+      .modal-dialog {
+        margin: 0;
+        transform: none;
+      }
+
+      .modal-content {
+        border: 0;
+        border-radius: 0;
+      }
+
+      .modal-header {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@include media-breakpoint-down(sm) {
+
+  .aside--reminded {
+
+    .section--page & {
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+
+    .inner-wrapper-sticky{
+      position: relative !important;
+      transform: none !important;
+      top: initial !important;
+    }
+
+    .card {
+      &.offset-top {
+        margin-top: rem(20px);
+      }
+    }
+
+    .card-header {
+      @include clearfix;
+      color: $blue;
+      background-color: $white;
+      bottom: 0;
+      box-shadow: 0 0 4px 0 rgba($var-color-d1dde9, 0.5);
+      height: auto;
+      left: 0;
+      position: fixed;
+      right: 0;
+      z-index: $zindex-sticky;
+      padding-left: rem(15px);
+      padding-right: rem(15px);
+
+      .price {
+        font-size: rem(28px);
+        line-height: rem(35px);
+
+        .currency {
+          font-size: rem(24px);
+        }
+      }
+
+      .price-good-to-know {
+        color: $var-color-blue-6d8cac;
+        font-size: rem(14px);
+      }
+
+      .card-header--price {
+        float: left;
+
+        + .card-header--contact {
+          width: auto;
+        }
+      }
+
+      .card-header--contact {
+        display: block;
+        float: right;
+        width: 100%;
+
+        .btn {
+          display: block;
+        }
+      }
+
+    }
+
+    &.without-header {
+      .card-header {
+        display: block;
+      }
+    }
+
+  }
+}

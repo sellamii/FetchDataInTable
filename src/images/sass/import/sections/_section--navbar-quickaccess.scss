@@ -1,0 +1,43 @@
+//
+// Page Home
+// --------------------------------------------------
+
+// Variable
+// --------------------------------------------------
+$var-section--navbar-quickaccess-box-shadow: 0 2px 44px 0 #D1DDE9 !default;
+// Mixin
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+.section--navbar-quickaccess {
+  z-index: $zindex-fixed + 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -(rem($var-section--navbar-quickaccess--height));
+  background: $white;
+  height: rem($var-section--navbar-quickaccess--height);
+  box-shadow: $var-section--navbar-quickaccess-box-shadow;
+  opacity: 0;
+  transition: $transition-base;
+
+  .nav-link {
+    color: $var-color-light-steel-blue; //$var-color-blue-light;
+    line-height: rem($CONST-BASE-UNIT * 4);
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+    padding: $CONST-BASE-UNIT;
+
+    &.active {
+      color: $var-color-blue-light;
+      background-color: transparent;
+      font-weight: $CONST-FONT-WEIGHT-BOLD;
+    }
+  }
+
+  .js--affix-section--navbar-quickaccess & {
+    top: 0;
+    opacity: 1;
+  }
+}
+

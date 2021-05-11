@@ -1,0 +1,94 @@
+//
+// Widget History
+// --------------------------------------------------
+
+// Variable
+// --------------------------------------------------
+$card-static-paragraph--border-left--color: $var-color-d1dde9 !default;
+$card-static-paragraph--ship--background-color: $var-color-blue-light !default;
+// Mixin
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+.card-static-paragraph {
+  align-items: center;
+  border: 0;
+  border-radius: 0;
+  flex-direction: row;
+
+  .card-img-top,
+  .card-body {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  &.right {
+    .card-img-top {
+      order: 2;
+    }
+
+    .card-body {
+      order: 1;
+    }
+
+  }
+
+  .card-img-top {
+    text-align: center;
+
+    .card-img {
+      width: 350px;
+    }
+  }
+
+  .card-count {
+    font-size: rem(50px);
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+  }
+
+  .card-sup-title {
+    font-size: rem(18px);
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+  }
+
+  .card-title {
+    font-size: rem(26px);
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+  }
+
+  .card-text {
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card-static-paragraph {
+    flex-direction: column;
+
+    .card-img-top,
+    .card-body {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    &.right {
+      .card-img-top {
+        order: 1;
+      }
+
+      .card-body {
+        order: 2;
+      }
+    }
+
+    .card-img-top {
+      padding-left: 32px;
+      padding-right: 32px;
+
+      .card-img {
+        width: 100%;
+      }
+    }
+  }
+}

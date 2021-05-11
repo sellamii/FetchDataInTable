@@ -1,0 +1,53 @@
+.section--recent-articles {
+  padding: rem($CONST-BASE-UNIT * 4) 0;
+
+  .h2 {
+    &.title {
+      font-size: rem(32px);
+      font-weight: $CONST-FONT-WEIGHT-LIGHT;
+      margin-bottom: rem($CONST-BASE-UNIT * 4);
+      strong {
+        font-weight: $CONST-FONT-WEIGHT-MEDIUM;
+      }
+    }
+  }
+
+  .section-footer{
+    margin-top: rem($CONST-BASE-UNIT * 4);
+  }
+
+  .card-article {
+    &:hover {
+      text-decoration: none;
+    }
+    .card-img-top {
+      height: rem(197px);
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .card-body {
+      .card-title {
+        color: $var-color-orange-dark;
+        font-size: rem(12px);
+        font-weight: $CONST-FONT-WEIGHT-BOLD;
+        margin-bottom: rem($CONST-BASE-UNIT);
+      }
+      .card-text {
+        font-size: rem(24px);
+        font-weight: $CONST-FONT-WEIGHT-THIN;
+        line-height: rem(32px);
+        margin-bottom: rem($CONST-BASE-UNIT * 4);
+      }
+      .date {
+        color: $var-color-light-steel-blue;
+        font-size: rem(12px);
+        font-weight: $CONST-FONT-WEIGHT-BOLD;
+        line-height: rem(11px);
+        border-left: 1px #d1dde9 solid;
+        padding: 0 0 0 rem($CONST-BASE-UNIT * 0.5);
+      }
+    }
+  }
+
+}

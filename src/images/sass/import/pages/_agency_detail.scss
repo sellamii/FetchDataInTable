@@ -1,0 +1,40 @@
+//
+// Page Home
+// --------------------------------------------------
+
+// Variable
+// --------------------------------------------------
+
+// Mixin
+// --------------------------------------------------
+
+// Making
+// --------------------------------------------------
+.page-agency-deatil {
+  // section navbar quick Access
+  .section--navbar-quickaccess {
+    .section-reminded {
+      .card {
+        margin: 0;
+        border: 0;
+      }
+      .card-header {
+        height: rem($var-section--navbar-quickaccess--height);
+        border: 0;
+        overflow: hidden;
+        .price {
+          font-size: rem(32px);
+        }
+        .price,
+        .price-good-to-know {
+          line-height: rem($var-section--navbar-quickaccess--height) - rem($CONST-BASE-UNIT * 3);
+        }
+        .price-good-to-know {
+          margin-left: $CONST-BASE-UNIT;
+          font-size: rem(14px);
+        }
+      }
+    }
+  }
+  // section contact
+}

@@ -1,0 +1,18 @@
+.section--around {
+  padding: rem($CONST-BASE-UNIT * 6) 0;
+
+  .section-header {
+    padding-bottom: rem($CONST-BASE-UNIT * 2);
+  }
+
+  ul li {
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+    line-height: rem(27px);
+  }
+
+  .item-result {
+    margin-bottom: rem($CONST-BASE-UNIT * 6);
+  }
+
+  @include agency_address;
+}

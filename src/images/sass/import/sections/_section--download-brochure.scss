@@ -1,0 +1,65 @@
+.section--download-brochure {
+  margin-bottom: rem($CONST-BASE-UNIT-5 * 12);
+
+  .section--download-brochure--container {
+    background-color: $var-color-blue-light;
+    color: $white;
+    padding: rem($CONST-BASE-UNIT-5 * 6) rem($CONST-BASE-UNIT-5 * 7);
+
+    &,
+    .sections-groupe{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .section-header {
+    margin-right: rem($CONST-BASE-UNIT * 4);
+  }
+
+  .h2.h2-title {
+    color: $white;
+    font-size: rem(28px);
+    font-weight: $CONST-FONT-WEIGHT-REGULAR;
+    line-height: rem(36px);
+  }
+
+  p {
+    font-size: rem(20px);
+    font-weight: $CONST-FONT-WEIGHT-LIGHT;
+    line-height: rem(24px);
+    margin: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .section--download-brochure {
+
+    .section--download-brochure--container {
+      flex-direction: column;
+      padding: rem($CONST-BASE-UNIT-5 * 3) rem($CONST-BASE-UNIT-5 * 4);
+    }
+
+    .section-header {
+      margin-right: rem($CONST-BASE-UNIT * 2);
+
+      img {
+        height: rem(92px);
+      }
+    }
+
+    .h2.h2-title {
+      font-size: rem(26px);
+    }
+
+    p {
+      display: none;
+    }
+
+    .section-footer {
+      padding-top: rem(15px);
+      text-align: center;
+    }
+  }
+}
